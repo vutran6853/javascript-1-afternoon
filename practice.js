@@ -6,13 +6,23 @@
 //plus the value of the name parameter.
 
 //Code here
+function greeting(name) {
+  console.log("Hello " + name)
+}
 
+greeting("Vu");
 //////////////////PROBLEM 2////////////////////
 
 //Rewrite the function greeting as a function expression.
 //Name it newGreeting.
 
 //Code Here
+// I AM NOW SURE ABOUT THIS 
+let newGreeting = function greeting(name) {
+  console.log("Hello " + name)
+}
+
+console.log(newGreeting);
 
 //////////////////PROBLEM 3////////////////////
 
@@ -21,20 +31,40 @@
 
 //Code Here
 
+
 //////////////////PROBLEM 4////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
 
 //Code Here
+ let groceries = ["apples", "milk", "eggs", "bread"]
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
+
 
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
 //Code Here
+
+// STILL WORKING ON THIS PROBLEM
+
+let checkGroceries = [];
+
+function doubleCheck() {
+  for(let i in groceries) { 
+    if(groceries === "chocolate") {
+      console.log(groceries);
+    }
+    else {
+      console.log("We do not have chocolate in stock");
+    }
+  };
+}
+
+
 
 //////////////////PROBLEM 5////////////////////
 
@@ -45,19 +75,36 @@
 
 //Code Here
 
+let dog = {
+  name: "Samsung",
+  color: "Golden",
+  age: 5,
+  goodBoy: true
+}
+
+
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
+
 //Code Here
+
+dog.name = "devMoutainClassPet";
 
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
 //Code Here
+dog.bark = function() {
+  function woof() {
+    console.log("Woof Woof");
+  }
+}
 
 //Store the result of invoking the bark method in a variable called ruff.
 
 //Code Here
+let ruff = dog.bark;
 
 //////////////////PROBLEM 6////////////////////
 
@@ -72,6 +119,12 @@
 
 //Code Here
 
+function looper() {
+  let Array = [];
+  let mySum = 0;
+}
+
+
 //////////////////PROBLEM 7////////////////////
 
 //Given the following function called math
@@ -84,6 +137,10 @@ function math(num1, num2, callback) {
 //returns the result of adding them together.
 
 //Code Here
+
+function add(num1, num2) {
+  return num1 + num2;
+}
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
@@ -145,10 +202,19 @@ let pondScope = ["duck", "sailorDuck", "rubberDuck", "realDuck"];
 
 //Code Here
 
+function outeFn() {
+  return "Vu Tran";
+}
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
 //Code Here
+function innerFn() {
+  return outeFn;
+}
+
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
 //Code Here
+
