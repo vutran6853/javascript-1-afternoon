@@ -6,11 +6,13 @@
 //plus the value of the name parameter.
 
 //Code here
+
 function greeting(name) {
-  console.log("Hello " + name)
+  return "Hello " + name;
 }
 
 greeting("Vu");
+
 //////////////////PROBLEM 2////////////////////
 
 //Rewrite the function greeting as a function expression.
@@ -19,10 +21,10 @@ greeting("Vu");
 //Code Here
 // I AM NOW SURE ABOUT THIS 
 let newGreeting = function greeting(name) {
-  console.log("Hello " + name)
+  return "Hello " + name;
 }
 
-console.log(newGreeting);
+newGreeting("Vu");
 
 //////////////////PROBLEM 3////////////////////
 
@@ -31,6 +33,9 @@ console.log(newGreeting);
 
 //Code Here
 
+let finalGreeting = (name) => console.log("Hello " + name);
+
+finalGreeting("Vu");
 
 //////////////////PROBLEM 4////////////////////
 
@@ -38,7 +43,8 @@ console.log(newGreeting);
 //"apples", "milk", "eggs", "bread"
 
 //Code Here
- let groceries = ["apples", "milk", "eggs", "bread"]
+
+let groceries = ["apples", "milk", "eggs", "bread"];
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
@@ -49,22 +55,19 @@ console.log(newGreeting);
 
 //Code Here
 
-// STILL WORKING ON THIS PROBLEM
+let array1 = [];
 
-let checkGroceries = [];
-
-function doubleCheck() {
-  for(let i in groceries) { 
-    if(groceries === "chocolate") {
-      console.log(groceries);
+function doubleCheck(array) {
+    if(groceries.includes("chocolate") === false) {
+      groceries.push("Chocolate");
     }
     else {
-      console.log("We do not have chocolate in stock");
+      console.log("We do have it")
     }
-  };
+    console.log(groceries);
 }
 
-
+doubleCheck(array1);
 
 //////////////////PROBLEM 5////////////////////
 
@@ -95,6 +98,7 @@ dog.name = "devMoutainClassPet";
 //The value of bark should be a function that returns the string "Woof woof".
 
 //Code Here
+
 dog.bark = function() {
   function woof() {
     console.log("Woof Woof");
@@ -104,6 +108,7 @@ dog.bark = function() {
 //Store the result of invoking the bark method in a variable called ruff.
 
 //Code Here
+
 let ruff = dog.bark;
 
 //////////////////PROBLEM 6////////////////////
@@ -119,11 +124,21 @@ let ruff = dog.bark;
 
 //Code Here
 
-function looper() {
-  let Array = [];
+function looper(array) {
   let mySum = 0;
+  for(let i = 0; i < array.length; i++) {
+    if (array % 2 == 0) {
+      mySum ++;
+      return "Even";
+    }
+    else {
+      return "Odd";
+    } 
+  }
+  
 }
 
+console.log(looper([101]));
 
 //////////////////PROBLEM 7////////////////////
 
